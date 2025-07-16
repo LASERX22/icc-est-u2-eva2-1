@@ -29,10 +29,15 @@ public class Book implements Comparable<Book>{
     }
     @Override
     public int compareTo(Book o) {
-        int comparacionTitulo=this.titulo.compareTo(o.getTitulo());
+        int comparacionTitulo=o.titulo.compareTo(this.titulo);
         if (comparacionTitulo!=0) {
-            return this.autor.compareTo(o.getAutor());
+            return comparacionTitulo;
         }
-        
+        return Integer.compare(anio, o.anio);
+
+    }
+    @Override
+    public String toString(){
+        return String.format("%s - %s (%d)",titulo,autor,anio);
     }
 }

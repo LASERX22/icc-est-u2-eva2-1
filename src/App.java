@@ -33,6 +33,6 @@ public class App {
                 new Book("Ciberseguridad", "Pedro León", 2023),
                 new Book("Blockchain", "Marta Ríos", 2021),
                 new Book("Machine Learning", "Cristina Gómez", 2022));
-        controlador.procesarLibros(libros);
+        System.out.println(controlador.procesarLibros(libros).toString());
     }
 }
